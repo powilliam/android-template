@@ -17,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -51,7 +52,8 @@ fun InstructionsScreen(modifier: Modifier = Modifier) {
         LazyColumn(
             modifier
                 .fillMaxSize()
-                .padding(paddingValues),
+                .padding(paddingValues)
+                .testTag("listOfInstructions"),
             contentPadding = PaddingValues(horizontal = 16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
@@ -60,6 +62,7 @@ fun InstructionsScreen(modifier: Modifier = Modifier) {
                 key = { _, instruction -> instruction }
             ) { index, instruction ->
                 Text(
+                    modifier = modifier.testTag("instruction"),
                     text = "${index + 1}. $instruction",
                     style = MaterialTheme.typography.labelLarge.copy(
                         fontFamily = FontFamily.Monospace
