@@ -42,9 +42,6 @@ fun InstructionsScreen(modifier: Modifier = Modifier) {
                 title = {
                     Text(text = "Instructions")
                 },
-                colors = TopAppBarDefaults.largeTopAppBarColors(
-                    scrolledContainerColor = MaterialTheme.colorScheme.surface
-                ),
                 scrollBehavior = scrollBehavior,
             )
         },
