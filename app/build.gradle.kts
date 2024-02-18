@@ -41,6 +41,13 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
+    kotlinOptions {
+        freeCompilerArgs += listOf(
+            "-Xopt-in=androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi",
+            "-Xopt-in=androidx.compose.material3.ExperimentalMaterial3Api"
+        )
+    }
 }
 
 dependencies {
