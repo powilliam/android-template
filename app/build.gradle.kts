@@ -51,7 +51,7 @@ android {
 }
 
 dependencies {
-    val composeBom = platform("androidx.compose:compose-bom:2024.02.00")
+    val composeBom = platform("androidx.compose:compose-bom:2024.04.00")
 
     // Jetpack Compose
     implementation(composeBom)
@@ -76,8 +76,8 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
 
     // Hilt
-    implementation("com.google.dagger:hilt-android:2.48")
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    implementation("com.google.dagger:hilt-android:2.49")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     kapt("com.google.dagger:hilt-android-compiler:2.46.1")
 
     // Tests
